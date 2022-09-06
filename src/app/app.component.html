@@ -1,19 +1,22 @@
 <div class="container-lg">
-    <div class="card">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                  <a class="nav-link active" aria-current="page" href="#">Bar Chart</a>
-                  <a class="nav-link" href="#">Line Chart</a>
-                  <a class="nav-link" href="#">Pie Chart</a>
-                </div>
-              </div>
-            </div>
-          </nav>
-
+    <div class="mt-5 mb-5" >
+        <ul class="nav nav-pills" style="display: flex; justify-content: space-evenly;">
+            <li class="nav-item">
+              <a routerLink="/progress-bar" class="nav-link" aria-current="page" routerLinkActive="active">Progress Bar</a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="/column-chart" class="nav-link" routerLinkActive="active">Column Chart</a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="/line-chart" class="nav-link" routerLinkActive="active">Line Chart</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Pore Korbo</a>
+            </li>
+          </ul>
     </div>
-    
 </div>
+
+<router-outlet></router-outlet>
 <!-- <app-progress-bar></app-progress-bar> -->
 <!-- <app-chart-table></app-chart-table> -->
