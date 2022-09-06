@@ -1,5 +1,21 @@
 <div class="container-lg">
-    <input type="text" name="name" id="" [(ngModel)] = "name">
-    <input type="text" name="progress" id="" [(ngModel)] = "progress">
-    <button class="btn btn-success">Update </button>
-</div>
+    <input type="text" name="name" id="" style="margin: 20px" [(ngModel)] = "names" />{{names}}
+    <input type="text" name="progress" id="" style="margin: 20px" [(ngModel)] = "valuesString" />{{valuesString}}
+    <button class="btn btn-success" style="margin-right: 10px;"  (click)="updateChartHabaHaba()">Update</button>
+  
+    <table class="table table-striped" >
+      <thead>
+          <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Progress</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let name of labelBase; let i = index">
+              <td>{{i+1}}</td>
+              <td> {{name}} </td>
+              <td> {{dataBase[i]}} </td>
+          </tr>
+      </tbody>
+    </table>
