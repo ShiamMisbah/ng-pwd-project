@@ -15,7 +15,7 @@
           <tr *ngFor="let name of labelBase; let i = index">
               <td>{{i+1}}</td>
               <td> {{name}} </td>
-              <td> {{dataBase[i]}} </td>
+              <td><ngb-progressbar type="success" [value]=dataBase[i] [showValue]="true"></ngb-progressbar>  </td>
           </tr>
       </tbody>
     </table>
