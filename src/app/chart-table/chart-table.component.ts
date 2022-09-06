@@ -9,14 +9,18 @@ import { BaseChartDirective } from 'ng2-charts';
 })
 export class ChartTableComponent {
   title = 'ng2-charts-demo';
-  @ViewChild(BaseChartDirective) anything: BaseChartDirective | undefined;
+  @ViewChild(BaseChartDirective) chart: BaseChartDirective | undefined;
   public barChartLegend = true;
   public barChartPlugins = [];
+
   public names: string = '';
+
   public valuesString: string = '';
+  
   public values = -1;
   public dataBase: number[] = [];
   public labelBase: string[] = [];
+
   public barChartData: ChartConfiguration<'bar'>['data'] = {
     labels: this.labelBase,
     datasets: [{ data: this.dataBase, label: 'Series A' }],
@@ -34,10 +38,12 @@ export class ChartTableComponent {
     this.labelBase.push(this.names);
     console.log(this.dataBase);
     console.log(this.labelBase);
+    this.names = '';
+    this.valuesString = '';
   }
 
   generateChartHabaHaba(){
-    this.anything?.update();
+    this.chart?.update();
   }
 
 }
